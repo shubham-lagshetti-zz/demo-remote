@@ -1,6 +1,25 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes",
-  "topicname":"naveen automationlabs"
+  
+  "o2Username": "shubham",
+  "o2Password": "Fission@123",
+  "accountName":"Cloudticity-Fission-QA",
+  
+  "awsUrl" :"https://cloudticity-fission-qa.signin.aws.amazon.com/console/",
+  "oxygenUrl":"https://oxygen-qa.cloudticity.com/auth/login",
+
+  "orgName" :"Cloudticity Internal",
+  "accName" : "Cloudticity-Fission-QA",
+
+  "AccId" : "cloudticity-fission-qa",
+  "awsUserName" : "subham-qa",
+  "awsPassword" : "Fission@123",
+  "ResourceId2" : "qa-shubham-001",
+  "authorizationToken":"73291ddc-7bc6-42d6-b763-a41f4857fa49",
+
+  "azureUrl" :"https://portal.azure.com/",
+  "azureUserEmail": "shubham@cloudticity.com",
+  "azureUserPwd": "Fission@123"
+
+
 }
+

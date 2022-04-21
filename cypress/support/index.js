@@ -15,6 +15,13 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import './cmdForOxygen'
+
+//>> run this command to use localstorage commands "npm i --save-dev cypress-localstorage-commands"
+import "cypress-localstorage-commands" // impoer this in command.js file
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+
+

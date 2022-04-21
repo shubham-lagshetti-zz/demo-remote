@@ -1,0 +1,15 @@
+{
+    "ignoreTestFiles" : ["**/1-getting-started/*","**/2-advanced-example/*"],
+    "viewportHeight"  : 1000,
+    "viewportWidth"   : 1200,
+    "defaultCommandTimeout": 20000,
+    "pageLoadTimeout" : 20000,
+    "projectId": "n3ogxd",
+    "chromeWebSecurity": false ,
+    "env":{
+      "username":"shubham",
+      "password":"Fission@123",
+      "awsUserName" : "subham-qa",
+      "awsPassword" : "Fission@123"
+  }
+}

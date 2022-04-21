@@ -1,7 +1,10 @@
 ///<reference types="cypress" />
-var accesstoken,idToken
+
 describe('testing me api',()=>{
+
+
 before(()=>{
+
     cy.generateToken()
     cy.saveLocalStorage()
 
