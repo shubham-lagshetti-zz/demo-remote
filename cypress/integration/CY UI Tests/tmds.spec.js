@@ -43,6 +43,8 @@ describe('TMDS test suite',()=>{
         cy.get('[data-testid="more-menu__awsc-nav-account-menu-button"]').click()
         cy.get('#menu--account').should('contain','Sign out')
         cy.get('#menu--account').contains('Sign out').click()
+
+)
        
 
     it('trigger lambda in aws for tmds installation',()=>{
@@ -51,8 +53,6 @@ describe('TMDS test suite',()=>{
 
         //login to aws
         //
-        "azureBaseUrl" :"https://portal.azure.com/",
-        "azureUserEmail": "parameswar.mondal@cloudticity.com",
-        "azureUserPwd": "6>v$c4(6Y@tQs(g^ZX/4pmfis"
+        
     })
 })

@@ -1,0 +1,64 @@
+{
+    "bodyWithCloudName":{
+        "cloud":"AWS"
+    },
+
+    "bodyWithAccountNumber":
+        {
+            "accounts": [
+                {
+                "account": "840798010532"
+                }
+            ]
+        },
+
+    "bodyWithMultipleRegion":
+    {
+        "accounts": [
+            {
+            "account": "123123123123",
+            "regions": [
+                "us-east-1",
+                "us-east-2"
+            ]
+            }
+        ]
+        },
+
+    "bodyWithServices":
+    {
+        "accounts": [
+            {
+            "account": "123123123123",
+            "regions": [
+                "us-east-1"
+            ],
+            "services": [
+                "aws.s3"
+            ]
+            }
+        ]
+    },
+
+
+    "bodyWithResource":
+    {
+        "accounts": [
+            {
+            "account": "123123123123",
+            "regions": [
+                "us-east-1"
+            ],
+            "services": [
+                "aws.S3"
+            ],
+            "event_name": "createVolume",
+            "resources": [
+                "qa-fission-2"
+            ]
+            }
+        ]
+        }
+        
+    
+}

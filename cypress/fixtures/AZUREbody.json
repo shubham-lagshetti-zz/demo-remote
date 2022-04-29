@@ -1,0 +1,62 @@
+{
+    "cloud":"AZURE",
+    "bodywithAccountNumber":
+    {
+        "cloud": "AZURE",
+        "accounts": [
+            {
+            "account": "fc9xxxxx-xxxx-xxxx-xxxx-8c63xxxxxxxx"
+            }
+        ]
+    },
+
+    "bodyWithRegion":
+    {
+        "cloud": "AZURE",
+        "accounts": [
+            {
+                "account": "fc9xxxxx-xxxx-xxxx-xxxx-8c63xxxxxxxx",
+                "regions": [
+                    "eastus"
+                ]
+            }
+        ]
+    },
+
+    "bodyWithServices":
+    {
+        "accounts": [
+            {
+            "account": "123123123123",
+            "regions": [
+                "us-east-1",
+                "us-east-2"
+            ],
+            "services": [
+                "aws.ec2",
+                "aws.s3"
+            ]
+            }
+        ]
+    },
+
+    "bodyWithResource":
+    {
+        "cloud": "AZURE",
+        "accounts": [
+            {
+                "account": "fc9xxxxx-xxxx-xxxx-xxxx-8c63xxxxxxxx",
+                "regions": [
+                    "eastus"
+                ],
+                "services": [
+                    "storageaccounts"
+                ],
+                "event_name": "write",
+                "resources": [
+                    "/subscriptions/{fc9xxxxx-xxxx-xxxx-xxxx-8c63xxxxxxxx}/resourceGroups/{RGName}/providers/Microsoft.Storage/storageAccounts/{resourceName}"
+                ]
+            }
+        ]
+    }
+}

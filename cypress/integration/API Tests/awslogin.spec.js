@@ -1,7 +1,8 @@
 /// <reference types="cypress"/>
-let accestoken,idToken
+const data = require('../../fixtures/example.json')
+let accestoken,idToken,refereshToken
 describe("Loginto AWS using API",()=>{
-    it("API login",()=>{
+    it.only("API login",()=>{
         cy.request({
             method:"POST",
             url:"https://cognito-idp.us-east-1.amazonaws.com/",
@@ -18,12 +19,17 @@ describe("Loginto AWS using API",()=>{
                 "ClientId" : "2sjjekabni5vdplr14s5us28hg"
              }
         }).then(resp=>{
-            cy.contains('Events').should('contain','Events')
-            console.log(resp);
-            cy.log('accesstoken='+JSON.stringify(resp.body.AuthenticationResult.AccessToken));
             accestoken=resp.body.AuthenticationResult.AccessToken;
             idToken=resp.body.AuthenticationResult.IdToken
-           localStorage.setItem('accesstoken',accestoken)
+            refereshToken=resp.body.AuthenticationResult.RefreshToken
+            localStorage.setItem('CognitoIdentityServiceProvider.2sjjekabni5vdplr14s5us28hg.shubham.refreshToken',refereshToken)
+            localStorage.setItem('CognitoIdentityServiceProvider.2sjjekabni5vdplr14s5us28hg.shubham.accessToken',accestoken)
+            localStorage.setItem('CognitoIdentityServiceProvider.2sjjekabni5vdplr14s5us28hg.shubham.idToken',idToken)
+            localStorage.setItem('CognitoIdentityServiceProvider.2sjjekabni5vdplr14s5us28hg.LastAuthUser','shubham')
+            cy.visit(data.oxygenUrl)
+            cy.wait(5000)
+            cy.get('.main-side-nav').contains('Events').click()
+            cy.get(':nth-child(4) > :nth-child(1) > [appaccordiontoggle=""]').click()
            
         })
     })

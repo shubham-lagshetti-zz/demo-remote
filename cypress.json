@@ -3,9 +3,10 @@
     "viewportHeight"  : 1000,
     "viewportWidth"   : 1200,
     "defaultCommandTimeout": 20000,
-    "pageLoadTimeout" : 20000,
+    "pageLoadTimeout" : 40000,
     "projectId": "n3ogxd",
     "chromeWebSecurity": false ,
+    "tenantId": "a0d28553-9884-4cdc-a8c1-cc26c3fcae04",
     "env":{
       "username":"shubham",
       "password":"Fission@123",

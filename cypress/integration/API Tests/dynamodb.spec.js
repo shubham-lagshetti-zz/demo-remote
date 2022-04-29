@@ -32,10 +32,7 @@ describe('send dummy data to dynamo db via api',()=>{
         })        
     })
 
-    it.only('me api',()=>{
-        cy.restoreLocalStorage()
-        util.sendDataToDynamoDB()
-    })
+    
 
 })
 
