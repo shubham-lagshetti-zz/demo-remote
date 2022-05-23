@@ -12,5 +12,6 @@
       "password":"Fission@123",
       "awsUserName" : "subham-qa",
       "awsPassword" : "Fission@123"
-  }
+  },
+  "experimentalInteractiveRunEvents":true
 }

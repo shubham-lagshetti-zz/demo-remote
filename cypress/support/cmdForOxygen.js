@@ -24,8 +24,8 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-
-const data = require('../fixtures/example.json')
+import "cypress-localstorage-commands"
+const data = require('../fixtures/config.json')
 
 Cypress.Commands.add('SigninAWS',() => {
     cy.log('---Login to AWS---')

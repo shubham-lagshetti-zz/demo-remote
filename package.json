@@ -4,7 +4,10 @@
   "description": "this is for api automation practice ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "spec": "npx cypress run --spec cypress/integration/APITests/awslogin.spec.js",
+    "noderun": "node  cypress/integration/sample.js",
+    "run:azlogin": "sh cypress/integration/AZURE/azlogin.sh"
   },
   "author": "shubham lagshetti",
   "license": "ISC",
@@ -13,6 +16,7 @@
     "cypress-localstorage-commands": "^1.7.0"
   },
   "dependencies": {
+    "aws-sdk": "^2.1136.0",
     "cypress-mochawesome-reporter": "^3.0.1",
     "shelljs": "^0.8.5"
   }
