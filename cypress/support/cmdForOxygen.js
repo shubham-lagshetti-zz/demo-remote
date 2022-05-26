@@ -25,6 +25,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 import "cypress-localstorage-commands"
+import 'cypress-file-upload';
 const data = require('../fixtures/config.json')
 
 Cypress.Commands.add('SigninAWS',() => {

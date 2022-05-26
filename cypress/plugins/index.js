@@ -81,26 +81,26 @@ const cypress = require("cypress")
 //   });
 
 // }
-
+const aws = require('aws-sdk');
+const { TokenFileWebIdentityCredentials } = require("aws-sdk");
 module.exports = (on, config) => {
     
-     var spec ="fistTest.spec.js"
-       if(spec.name==spec)
-   {
-    console.log('---------------------running--------------------',spec) 
-    on('before:spec',(spec)=>{ 
+    on('before:run',async()=>{ 
         
-        console.log('---------------------before spec--------------------',spec.name)     
-     })
+        aws.config.update({ region: 'us-east-1' });
+         const ssm = new aws.SSM();
 
-        
-    on('after:run',()=>{
+        const params = {
+        Name: 'o2-api-key',
+        WithDecryption: true
+    };
+        const result = await ssm.getParameter(params).promise();
        
-        console.log('------after spec---------------------------------',spec.name)
-    })
-   } 
-  
-    //console.log(' not for spec running',spec.name)  
+        console.log(result.Parameter.Value)
+        //localStorage.setItem('apitoken',result.Parameter.Value)
+        
+       
+     })
 }
 
 

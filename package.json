@@ -13,11 +13,13 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^9.6.0",
+    "cypress-file-upload": "^5.0.8",
     "cypress-localstorage-commands": "^1.7.0"
   },
   "dependencies": {
     "aws-sdk": "^2.1136.0",
     "cypress-mochawesome-reporter": "^3.0.1",
+    "cypress-promise": "^1.1.0",
     "shelljs": "^0.8.5"
   }
 }

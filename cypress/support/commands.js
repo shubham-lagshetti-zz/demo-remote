@@ -24,3 +24,26 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import "cypress-localstorage-commands"
+import 'cypress-file-upload';
+
+const aws = require('aws-sdk')
+
+Cypress.Commands.add('getsdktokena',()=>{
+    { 
+        
+        aws.config.update({ region: 'us-east-1' });
+         const ssm = new aws.SSM();
+    
+        const params = {
+        Name: 'o2-api-key',
+        WithDecryption: true
+    };
+}
+        const result =  ssm.getParameter(params).promise();
+        console.log(result.Parameter.Value)
+        localStorage.setItem('apitoken',result.Parameter.Value)
+        
+       
+     
+
+})
